@@ -1,0 +1,16 @@
+<h3>Student Form</h3>
+
+<%= form_tag new_student_path do %>
+  <label>First Name:</label><br>
+  <%= text_field_tag :'student[first_name]' %><br>
+
+  <label>Last Name:</label><br>
+  <%= text_field_tag :'student[last_name]' %><br>
+
+  <%= submit_tag "Submit Student" %>
+<% end %>
+
+<% if @student %>
+   <h1><%= @student.first_name %></h1>
+   <h1><%= @student.last_name %></h1>
+<% end %>
